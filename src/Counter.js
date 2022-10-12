@@ -9,8 +9,8 @@ export function Counter() {
     const [dislike, setdislike] = useState(0);
     return (
         <div>
-            <button onClick={() => setlike(like + 1)} className='buttons1'><AiFillLike />{like}</button>
-            <button onClick={() => setdislike(dislike + 1) } className='buttons2'><AiFillDislike />{dislike}</button>
+            <button onClick={() => setlike(like + 1)} className='buttons1'><AiFillLike /><span className='like'>{like}</span></button>
+            <button onClick={() => setdislike(dislike + 1) } className='buttons2'><AiFillDislike /><span className='dislike'>{dislike}</span></button>
         </div>
     );
 }

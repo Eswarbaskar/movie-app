@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Navbar from './Navbar';
 import Home from './Home';
+import Edit from './Edit';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/movielist" element={<Movielist/>}/>
         <Route path="/addmovie" element={<Addmovie/>}/>
+        <Route path="/edit/:id" element={<Edit/>}/>
         
         </Routes>
        </div>
