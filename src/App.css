@@ -19,6 +19,13 @@
   gap: 16px;
   justify-content: space-around;
 }
-.buttons{
+.buttons1{
   margin-right: 5px;
+  border-radius: 40%;
+  border: 1px solid rgb(52, 193, 52);
+}
+.buttons2{
+  margin-right: 5px;
+  border-radius: 40%;
+  border: 1px solid rgb(205, 41, 41);
 }

@@ -66,10 +66,10 @@ function Movielist() {
                 "Remy, a rat, aspires to become a renowned French chef. However, he fails to realise that people despise rodents and will never enjoy a meal cooked by him."
         },
         {
-            name: "Ratatouille",
+            name: "Valimai",
             poster:
-                "https://resizing.flixster.com/gL_JpWcD7sNHNYSwI1ff069Yyug=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzc4ZmJhZjZiLTEzNWMtNDIwOC1hYzU1LTgwZjE3ZjQzNTdiNy5qcGc=",
-            rating: 8,
+            "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2xr9qkJIPaiIYB8o4yQytx_5oBQJzUGUb7_R-gKq7lwpNmR7Z",
+            rating: 8.1,
             summary:
                 "Remy, a rat, aspires to become a renowned French chef. However, he fails to realise that people despise rodents and will never enjoy a meal cooked by him."
         }
