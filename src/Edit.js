@@ -107,7 +107,7 @@ function Edit() {
         </div>
         <div className="col-lg-6">
         
-                <img className='image' src="https://c4.wallpaperflare.com/wallpaper/153/110/404/movies-bollywood-movies-wallpaper-preview.jpg" alt="" />
+                <img className='image' src="https://c4.wallpaperflare.com/wallpaper/832/728/919/5bd23b8e604cd-wallpaper-preview.jpg" alt="" />
         </div>
     </div>
 </div>
