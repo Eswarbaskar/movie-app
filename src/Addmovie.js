@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+// import React, { useContext } from 'react'
 import { useFormik } from 'formik';
-import UserContext from './Usercontext';
+// import UserContext from './Usercontext';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function Addmovie() {
-    const UserData = useContext(UserContext)
+    // const UserData = useContext(UserContext)
     const navigate = useNavigate()
     const formik = useFormik({
         initialValues: {
@@ -29,9 +30,14 @@ function Addmovie() {
             }
             return errors;
         },
-        onSubmit: values => {
-            UserData.setUser([...UserData.user, values])
-            navigate('/movielist')
+        onSubmit:async (values) => {
+           try{
+            await axios.post("https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api",values)
+            navigate("/movielist")
+           } catch(errors){
+            console.log(errors)
+
+           }
         },
     });
     return (
@@ -50,7 +56,7 @@ function Addmovie() {
                                         id='name'
                                         name='name'
                                         onChange={formik.handleChange}
-                                        value={formik.values.moviename}
+                                        value={formik.values.name}
                                     />
                                 </div>
                                 <div className="input-group mb-3">
