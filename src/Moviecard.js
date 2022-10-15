@@ -30,7 +30,7 @@ function Moviecard(prop) {
                <div className='buttons'>
                <Link to={`/edit/${prop.item.id}`} type='button' className="btn btn-primary buttons1"><AiOutlineEdit/></Link>
                 <Link to={`/viewmovie/${prop.item.id}`} type='button' className="btn btn-warning buttons1"><AiOutlineFolderView/></Link>
-                <Link to={``} type='button' className="btn btn-danger buttons1"><AiOutlineDelete/></Link>
+                <Link to={`/delete/${prop.item.id}`} type='button' className="btn btn-danger buttons1"><AiOutlineDelete/></Link>
                </div>
             </div>
             

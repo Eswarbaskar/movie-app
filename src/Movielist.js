@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Moviecard from './Moviecard';
+import { apiUrl } from './App';
 // import UserContext from './Usercontext';
 
 function Movielist() {
@@ -10,7 +11,7 @@ function Movielist() {
     useEffect(()=>{
         async function fetchData(){
             try {
-                let Data = await axios.get("https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api")
+                let Data = await axios.get(apiUrl)
                 setMovielist(Data.data)
              } catch (error) {
                  console.log(error);
@@ -21,9 +22,9 @@ function Movielist() {
    
     return (
         <>
-         { movielist.map((item,index) => {
+         { movielist.map((item,id) => {
                     return (
-                       <Moviecard item={item} key={index}/> 
+                       <Moviecard item={item} key={id}/> 
                     )
                 })
             }

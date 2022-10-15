@@ -10,18 +10,19 @@ import {
 import Navbar from './Navbar';
 import Home from './Home';
 import Edit from './Edit';
-import { UserProvider } from './Usercontext';
+// import { UserProvider } from './Usercontext';
 import Viewmovie from './Viewmovie';
-// import Delete from './Delete';
+import Delete from './Delete';
+export const apiUrl="https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api" 
 
 
 function App() {
-//   const apiUrl="https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api"
+  
     
   return (
     <BrowserRouter>
       <Navbar />
-      <UserProvider>
+      {/* <UserProvider> */}
       <div className='header'>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,10 +30,10 @@ function App() {
           <Route path="/addmovie" element={<Addmovie />} />
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/viewmovie/:id" element={<Viewmovie/>} />
-          {/* <Route path="/delete/:id" element={<Delete/>} /> */}
+          <Route path="/delete/:id" element={<Delete/>} />
         </Routes>
       </div>
-      </UserProvider>
+      {/* </UserProvider> */}
     </BrowserRouter>
   );
 }

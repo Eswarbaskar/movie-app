@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { apiUrl } from './App';
 
 
 
@@ -10,7 +11,7 @@ function Viewmovie() {
   const [movielist, setMovielist] = useState({})
   async function fetchData() {
     try {
-      let Data = await axios.get(`https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api/${param.id}`)
+      let Data = await axios.get(`${apiUrl}/${param.id}`)
       setMovielist(Data.data)
     } catch (error) {
       console.log(error);

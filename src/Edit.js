@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 // import UserContext from './Usercontext'
 import { useFormik } from 'formik';
+import { apiUrl } from './App';
 
 function Edit() {
   let navigate = useNavigate()
@@ -31,13 +32,13 @@ function Edit() {
         return errors;
     },
     onSubmit:async(values)=>{
-      await axios.put(`https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api/${params.id}`,values)
+      await axios.put(`${apiUrl}/${params.id}`,values)
       navigate("/movielist")
     },
   })
   async function fetchData() {
     try {
-      let user = await axios.get(`https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api/${params.id}`)
+      let user = await axios.get(`${apiUrl}/${params.id}`)
       formik.setValues(user.data)
     }
     catch (error) {

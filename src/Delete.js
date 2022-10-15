@@ -1,17 +1,34 @@
-// import axios from 'axios'
-// import React from 'react'
-// import { useParams } from 'react-router-dom'
+import axios from 'axios'
+import React ,{ useEffect }from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import { apiUrl } from './App'
 
-// function Delete() {
-//     let params =useParams()
-//     async function fetchData(){
-//         alert("want to delete")
-//         await axios.delete(`https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api/${params.id}`)
-//     }
-//     fetchData()
-//   return (
-//     <div>Delete</div>
-//   )
-// }
 
-// export default Delete
+function Delete() {
+    let navigate=useNavigate()
+    let params =useParams()
+    async function handledelete(){
+        
+        await axios.delete(`${apiUrl}/${params.id}`)
+    }
+    handledelete()
+    async function fetchData() {
+        try {
+           await axios.get(apiUrl)
+          navigate("/movielist")
+        }
+        catch (error) {
+          console.log(error);
+        }
+      }
+    
+      useEffect(() => {
+    
+        fetchData()
+      }, [])
+  return (
+    <></>
+  )
+}
+
+export default Delete
