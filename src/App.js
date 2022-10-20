@@ -5,6 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate,
 
 } from "react-router-dom";
 import Navbar from './Navbar';
@@ -13,6 +14,7 @@ import Edit from './Edit';
 // import { UserProvider } from './Usercontext';
 import Viewmovie from './Viewmovie';
 import Delete from './Delete';
+import Notfound from './Notfound';
 export const apiUrl="https://634820b50b382d796c6a0c42.mockapi.io/movie-app/api" 
 
 
@@ -31,6 +33,8 @@ function App() {
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/viewmovie/:id" element={<Viewmovie/>} />
           <Route path="/delete/:id" element={<Delete/>} />
+          <Route path="/404" element={<Notfound/>} />
+          <Route path="*" element={<Navigate replace to="/404"/>} />
         </Routes>
       </div>
       {/* </UserProvider> */}
