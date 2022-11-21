@@ -13,7 +13,7 @@ function Home() {
 
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
               <div className="carousel-inner">
-                <h1 className='text-center'>Wlecome to IMBD</h1>
+                <h1 className='text-center'>Wlecome to IMDb</h1>
                 <div className="carousel-item active">
                   <img src="https://c4.wallpaperflare.com/wallpaper/906/604/894/movies-bollywood-movies-wallpaper-preview.jpg" className="d-block w-100" alt="..." />
                 </div>
